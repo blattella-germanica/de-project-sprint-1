@@ -8,6 +8,11 @@ JOIN tmp_rfm_frequency trf ON trr.user_id=trf.user_id
 JOIN tmp_rfm_monetary_value trmv ON trr.user_id=trmv.user_id
   );
 
+SELECT *
+FROM analysis.dm_rfm_segments drs
+ORDER BY user_id
+LIMIT 10;
+
 |user_id |recency|frequency|monetary_value|
 |---|-------|---------|--------------|
 |0  |1      |3        |4             |
